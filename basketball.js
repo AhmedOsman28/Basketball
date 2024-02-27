@@ -527,7 +527,7 @@ var drawClouds = function()
     
     stroke(178, 189, 199);               // Makes the stroke a light gray.
     
-    // This if/else statement makes it so that the clouds change colour as it turns       from day to night.
+    // This if/else statement makes it so that the clouds change colour as it turns from day to night.
     if(sunX < 415)
     {
         fill(242, 234, 234);             // Makes fill white.
@@ -938,8 +938,8 @@ called in the gameScreen(); function.
 
 var shoot = function()
 {
-    /*This if statement makes it so that if the shoot button is pressed the player raises his hand, and the ball goes to his upraised hand. It also makes 
-    startFunction equal to 1 which will start the shootBall(); function.
+    /*This if statement makes it so that if the shoot button is pressed the player raises his hand, and the ball goes to his upraised hand. 
+    It also makes startFunction equal to 1 which will start the shootBall(); function.
     */
     if(mouseX > 35 && mouseX < 65 && mouseY > 310 && mouseY < 340 && mouseIsPressed)
     {
@@ -1411,7 +1411,7 @@ var descriptionScreen = function()
         moves off the screen. It also makes it so that if the user's mouse hovers
         over the arrow button the stroke decreases.
         */
-        if(mouseX > slideX + 225 && mouseX < slideX + 275 && mouseY > 205 && mouseY <         255)
+        if(mouseX > slideX + 225 && mouseX < slideX + 275 && mouseY > 205 && mouseY < 255)
         {
             strokeWeight(5);
             if(mouseIsPressed)
@@ -1470,7 +1470,7 @@ var descriptionScreen = function()
             slide moves off the screen. It also makes it so that if the user's mouse
             hovers over the arrow button the stroke decreases.
             */
-            if(mouseX > slideX + 635 && mouseX < slideX + 685 && mouseY > 205 &&                 mouseY < 255)
+            if(mouseX > slideX + 635 && mouseX < slideX + 685 && mouseY > 205 && mouseY < 255)
             {
                 strokeWeight(5);
                 if(mouseIsPressed)
@@ -1533,7 +1533,7 @@ var descriptionScreen = function()
             It also makes it so that if the button is clicked currentSlide is equal 
             to 0 and the user is taken back to the original description screen.
             */
-            if(mouseX > slideX + 1055 && mouseX < slideX + 1085 && mouseY > 65 &&                mouseY < 95)
+            if(mouseX > slideX + 1055 && mouseX < slideX + 1085 && mouseY > 65 && mouseY < 95)
             {
                 //rect(slideX + 655, 65, 30, 30);
                 strokeWeight(4);
