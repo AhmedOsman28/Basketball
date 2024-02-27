@@ -270,7 +270,7 @@ var drawTrees = function()
     // This for loop iterates through the array, drawing a tree at each position.
     for(var i = 0; i < positions.length; i++)
     {
-        var position = positions[i]; // This variable stores the values in the array                                          at index i.
+        var position = positions[i]; // This variable stores the values in the array at index i.
         image(tree, position.x, position.y, 60, 200);
         
     }
@@ -543,7 +543,7 @@ var drawClouds = function()
     */
     for(var i = 0; i < cloudPositions.length; i++)
     {
-        var position = cloudPositions[i];  // Stores the value of the array at index         i in a variable called position.
+        var position = cloudPositions[i];  // Stores the value of the array at index i in a variable called position.
         ellipse(position.x, position.y, 135, 40);
         ellipse(position.x - 20, position.y - 5, 60, 45);
         ellipse(position.x + 20, position.y, 60, 45);
@@ -695,7 +695,7 @@ var drawResetButton = function()
 {
     fill(0, 0, 0);                      // Makes fill black.
     
-    // This if statement makes it so that if the mouse is hovering over the reset        button the stroke weight increases and if it is pressed it turns red.
+    // This if statement makes it so that if the mouse is hovering over the reset button the stroke weight increases and if it is pressed it turns red.
     if(mouseX > 360 && mouseX < 390 && mouseY > 325 && mouseY < 355)
     {
         strokeWeight(2);
@@ -740,8 +740,8 @@ var drawBall = function()
 {
     fill(255, 162, 0);                          // Makes the basketball orange.
     ellipse(ballX, ballY, 30, 30);              // Draws the basketball.
-    line(ballX + 15, ballY, ballX - 15, ballY); // Draws a horizontal line for the       basketball.
-    line(ballX, ballY + 15, ballX, ballY - 15); // Draws a vertical line for the         basketball.
+    line(ballX + 15, ballY, ballX - 15, ballY); // Draws a horizontal line for the basketball.
+    line(ballX, ballY + 15, ballX, ballY - 15); // Draws a vertical line for the basketball.
     
 };
 
@@ -755,7 +755,7 @@ function.
 var dribbleBall = function()
 {
     /*
-    Everything in this if statement runs when the UP key is pressed, it makes it so      that the ball bounces.
+    Everything in this if statement runs when the UP key is pressed, it makes it so that the ball bounces.
     */
     if(keyIsPressed && keyCode === UP)
     {
@@ -767,13 +767,13 @@ var dribbleBall = function()
         //Only runs if the ball is at x 300.
         if(ballX === 300)
         {
-            // Makes it so that the y coords of the ball decreases if it is more than             314 which it is when it starts.
+            // Makes it so that the y coords of the ball decreases if it is more than 314 which it is when it starts.
             if(ballY > 314) 
             {
                 ballSpeed = -5;
                 rotateArmAngle = 60;
             }
-            // Makes it so that the y coords of the ball increases if it goes to y               260.
+            // Makes it so that the y coords of the ball increases if it goes to y 260.
             if(ballY < 261)
             {
                 ballSpeed = 5;
@@ -938,7 +938,7 @@ called in the gameScreen(); function.
 
 var shoot = function()
 {
-    /*This if statement makes it so that if the shoot button is pressed the player       raises his hand, and the ball goes to his upraised hand. It also makes 
+    /*This if statement makes it so that if the shoot button is pressed the player raises his hand, and the ball goes to his upraised hand. It also makes 
     startFunction equal to 1 which will start the shootBall(); function.
     */
     if(mouseX > 35 && mouseX < 65 && mouseY > 310 && mouseY < 340 && mouseIsPressed)
@@ -1066,7 +1066,7 @@ var recordStreak = function()
     rect(310, 5, 85, 30);
     rect(10, 5, 105, 30);
     
-    // Writes "Streak:" and the current streak and "Streak Goal:" and the user's         streak goal
+    // Writes "Streak:" and the current streak and "Streak Goal:" and the user's streak goal
     textSize(15);
     fill(5, 4, 4);
     text("STREAK: " + streak, 315, 25);
@@ -1074,7 +1074,7 @@ var recordStreak = function()
     textSize(11);
     
     /*
-    This if statement makes it so that when the ball goes into the net the streak        increases by one.
+    This if statement makes it so that when the ball goes into the net the streak increases by one.
     */
     if(ballX < 71 && ballY > 160 && ballY < 164)
     {
@@ -1083,7 +1083,8 @@ var recordStreak = function()
 };
 
 /*
-This function draws a larger basketball on the starting and description screens. It is called in the startingScreen(); and descriptionScreen(); function.
+This function draws a larger basketball on the starting and description screens.
+It is called in the startingScreen(); and descriptionScreen(); function.
 */
 
 var drawLargerBall = function()
@@ -1091,8 +1092,8 @@ var drawLargerBall = function()
     
     fill(255, 157, 0);                                  // Makes fill orange.
     ellipse(350, largerBallY, 75, 75);                  // Draws the ball.
-    line(350 + 37, largerBallY, 350 - 37, largerBallY); // Draws a horizontal line       for the basketball.
-    line(350, largerBallY + 37, 350, largerBallY - 37); // Draws a vertical line for     the basketball.
+    line(350 + 37, largerBallY, 350 - 37, largerBallY); // Draws a horizontal line for the basketball.
+    line(350, largerBallY + 37, 350, largerBallY - 37); // Draws a vertical line for the basketball.
 };
 
 /*
@@ -1128,7 +1129,7 @@ var drawRoad = function()
     fill(163, 140, 140);                // Makes fill a light brownish gray.
     rect(0, 275, 400, 25);              // Draws a rectangle for the road.
     
-    //This array of objects stores the x coordinates for each of the road's border       lines
+    //This array of objects stores the x coordinates for each of the road's border lines
     var borderLineXCoords = [
         {x : 50},
         {x : 100},
@@ -1139,7 +1140,7 @@ var drawRoad = function()
         {x : 350}
     ];
     
-    // This for loop increments through the array, then draws a borderline at each x     coordinate.
+    // This for loop increments through the array, then draws a borderline at each x coordinate.
     for(var i = 0; i < borderLineXCoords.length; i++)
     {
         fill(238, 242, 0);
@@ -1220,7 +1221,8 @@ var driveCars = function()
 };
 
 /*
-This function draws an arrow. Its parameters ask what the rectangle and triangle's x coordinate will be. It is called in the descriptionScreen(); function.
+This function draws an arrow. Its parameters ask what the rectangle and triangle's x coordinate will be.
+It is called in the descriptionScreen(); function.
 */
 
 var drawArrow = function(rectX, triX)
@@ -1249,7 +1251,8 @@ var drawXButton = function()
 //*********************
 
 /*
-This function draws the starting screen, it draws a bouncing ball on a red background along with the title and two buttons, one that takes you to the game and the other that takes you to the description. It is called in the draw function.
+This function draws the starting screen, it draws a bouncing ball on a red background along with the title and two buttons,
+one that takes you to the game and the other that takes you to the description. It is called in the draw function.
 */
 var startingScreen = function()
 {
